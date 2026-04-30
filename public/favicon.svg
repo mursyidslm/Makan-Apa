@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00c96b"/>
+      <stop offset="100%" stop-color="#00a057"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <g transform="translate(12, 10)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- pot -->
+    <ellipse cx="20" cy="20" rx="18" ry="6" fill="rgba(255,255,255,0.15)" stroke="#fff"/>
+    <path d="M2 20 v16 a18 10 0 0 0 36 0 v-16" fill="rgba(255,255,255,0.1)" stroke="#fff"/>
+    <!-- lid handles -->
+    <line x1="0" y1="20" x2="-2" y2="18"/>
+    <line x1="40" y1="20" x2="42" y2="18"/>
+    <!-- steam -->
+    <path d="M12 14 Q10 8 12 4" stroke="#ffe082" stroke-width="2" fill="none" opacity="0.9"/>
+    <path d="M20 12 Q18 6 20 1" stroke="#ffe082" stroke-width="2" fill="none" opacity="0.9"/>
+    <path d="M28 14 Q26 8 28 4" stroke="#ffe082" stroke-width="2" fill="none" opacity="0.9"/>
+  </g>
+</svg>
