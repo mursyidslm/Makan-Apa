@@ -69,7 +69,7 @@ export default function Home() {
             Masak Apa <span className="highlight" data-testid="hero-highlight">Hari Ini?</span>
           </h1>
           <p className="hero-subtitle" data-testid="hero-subtitle">
-            Temukan ribuan resep masakan Indonesia yang mudah diikuti
+            Temukan ribuan resep masakan Khas Indonesia yang mudah diikuti
           </p>
           <form
             onSubmit={handleHeroSearch}
