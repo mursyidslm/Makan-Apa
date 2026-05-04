@@ -1,5 +1,5 @@
 name: Cypress Automation
-
+run-name: E2E cypress Tests
 on:
   push:
     branches:
@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install Dependencies
         run: npm ci
@@ -45,6 +45,8 @@ jobs:
         with:
           name: cypress-report
           path: cypress/reports
+          retention-days: 5
+          if-no-files-found: ignore
 
       - name: Upload Screenshots
         if: always()
@@ -52,6 +54,8 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+          retention-days: 5
+          if-no-files-found: ignore
 
       - name: Upload Videos
         if: always()
@@ -59,3 +63,5 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+          retention-days: 3
+          if-no-files-found: ignore

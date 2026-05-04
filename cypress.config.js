@@ -4,6 +4,7 @@ export default defineConfig({
   allowCypressEnv: false,
 
   video: true,
+  videoUploadOnPasses: false,
   trashAssetsBeforeRuns: true,
 
   screenshotsFolder: "cypress/screenshots",
