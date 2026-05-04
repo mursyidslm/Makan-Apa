@@ -1,3 +1,10 @@
+<!-- install cypress -->
+npm install
+npm install cypress --save-dev
+npx cypress open
+npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

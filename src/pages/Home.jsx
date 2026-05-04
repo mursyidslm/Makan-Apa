@@ -61,25 +61,34 @@ export default function Home() {
   if (loading) return <Loading />;
 
   return (
-    <div className="home">
+    <div className="home" data-testid="home-page">
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" data-testid="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">
-            Masak Apa <span className="highlight">Hari Ini?</span>
+          <h1 className="hero-title" data-testid="hero-title">
+            Masak Apa <span className="highlight" data-testid="hero-highlight">Hari Ini?</span>
           </h1>
-          <p className="hero-subtitle">
+          <p className="hero-subtitle" data-testid="hero-subtitle">
             Temukan ribuan resep masakan Indonesia yang mudah diikuti
           </p>
-          <form onSubmit={handleHeroSearch} className="hero-search">
+          <form
+            onSubmit={handleHeroSearch}
+            className="hero-search"
+            data-testid="hero-search-form"
+          >
             <input
               type="text"
               placeholder="Cari resep, misalnya: nasi goreng, rendang..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="hero-search-input"
+              data-testid="hero-search-input"
             />
-            <button type="submit" className="hero-search-btn">
+            <button
+              type="submit"
+              className="hero-search-btn"
+              data-testid="cari-resep-button"
+            >
               Cari Resep
             </button>
           </form>
@@ -88,9 +97,11 @@ export default function Home() {
 
       {/* Categories */}
       {categories.length > 0 && (
-        <section className="section">
-          <h2 className="section-title">Kategori Resep</h2>
-          <div className="category-list">
+        <section className="section" data-testid="categories-section">
+          <h2 className="section-title" data-testid="categories-title">
+            Kategori Resep
+          </h2>
+          <div className="category-list" data-testid="category-list">
             {categories.map((cat) => (
               <CategoryChip key={cat.key} category={cat} />
             ))}
@@ -99,9 +110,11 @@ export default function Home() {
       )}
 
       {/* Latest Recipes */}
-      <section className="section">
-        <h2 className="section-title">Resep Terbaru</h2>
-        <div className="recipe-grid">
+      <section className="section" data-testid="latest-recipes-section">
+        <h2 className="section-title" data-testid="latest-recipes-title">
+          Resep Terbaru
+        </h2>
+        <div className="recipe-grid" data-testid="recipe-grid">
           {recipes.map((recipe, i) => (
             <RecipeCard key={`${recipe.key}-${i}`} recipe={recipe} />
           ))}
@@ -111,6 +124,7 @@ export default function Home() {
             className="load-more-btn"
             onClick={loadMore}
             disabled={loadingMore}
+            data-testid="load-more-button"
           >
             {loadingMore ? "Memuat..." : "Muat Lebih Banyak"}
           </button>
