@@ -27,3 +27,5 @@ dist-ssr
 cypress/videos
 cypress/screenshots
 cypress/reports
+.vercel
+.env*.local
