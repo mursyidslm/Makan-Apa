@@ -4,7 +4,7 @@ import 'cypress-mochawesome-reporter/register';
 
 describe('Validasi Home Page', () => {
     it('Search Resep', () => {
-        HomePage.visit()
+        HomePage.visit()testsalah
         homepage.validateTitle()
         homepage.searchInput()
         homepage.clickCariResepButton()
