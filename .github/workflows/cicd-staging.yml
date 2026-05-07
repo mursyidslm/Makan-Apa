@@ -3,11 +3,11 @@ run-name: E2E cypress Tests
 on:
   push:
     branches:
-      - main
+      - staging
 
   pull_request:
     branches:
-      - main
+      - staging
 
   workflow_dispatch:
 
@@ -52,7 +52,7 @@ jobs:
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy to Vercel Production
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/staging'
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Upload HTML Report
